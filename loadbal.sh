@@ -7,8 +7,7 @@
         sudo apt-get install -y nginx
         cd /etc/nginx/sites-available
         sudo mv default default.bak
-        sudo cp /home/vagrant/project1-cilsy/nginx/default.master /etc/nginx/sites-available/
-	sudo mv default.master default
+        sudo cat /home/vagrant/project1-cilsy/nginx/default.master > /etc/nginx/sites-available/default
         echo "restart servoce"
         sudo nginx -t
         sudo nginx -s reload
