@@ -6,8 +6,8 @@
         echo "Melakukan Instalasi Web server"
         sudo apt-get install -y nginx
         cd /etc/nginx/sites-available
-        sudo mv default default.bak
-        sudo cat /home/vagrant/project1-cilsy/nginx/default.master > /etc/nginx/sites-available/default
+        sudo rm -f default
+        sudo cat /home/vagrant/project1-cilsy/nginx/default.lb.bak > /etc/nginx/sites-available/default
         echo "restart servoce"
         sudo nginx -t
         sudo nginx -s reload
