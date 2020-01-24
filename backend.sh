@@ -30,8 +30,8 @@
         echo "copy file config"
         echo "===================>"
         cd /etc/nginx/sites-available
-        sudo mv default default.bak
-        sudo cat /home/vagrant/project1-cilsy/nginx/default.lb > /etc/nginx/sites-available/default
+        sudo rm -f default
+        sudo cat /home/vagrant/project1-cilsy/nginx/default.backend.bak > /etc/nginx/sites-available/default
         echo "===================>"
         echo "restart service"
         echo "===================>"
