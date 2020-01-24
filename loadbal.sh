@@ -13,5 +13,6 @@
         sudo nginx -s reload
         sudo systemctl restart nginx.service
         echo "Instal web server selesai"
+        exit 0
         
 
